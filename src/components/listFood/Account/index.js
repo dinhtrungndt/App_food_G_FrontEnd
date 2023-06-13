@@ -4,7 +4,7 @@ import React from 'react'
 const AccountScreens = () => {
   return (
     <View>
-      <Text>AccountScreens</Text>
+      <Text>Khai Khai Khai</Text>
     </View>
   )
 }

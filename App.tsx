@@ -1,12 +1,14 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, SafeAreaView} from 'react-native';
+import LoginScreens from './src/components/user/login';
 
-const App = () => {
+const App = (): React.JSX.Element => {
   return (
-    <View>
-      <Text>Hello. My name is Trung</Text>
-    </View>
+    <SafeAreaView>
+      <LoginScreens/>
+    </SafeAreaView>
   );
+
 };
 
 export default App;

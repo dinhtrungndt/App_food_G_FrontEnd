@@ -1,10 +1,12 @@
 import React from 'react';
 import {Text, View} from 'react-native';
+import AccountScreens from './src/components/listFood/Account';
+
 
 const App = () => {
   return (
     <View>
-      <Text>Hello. My name is Trung</Text>
+      <AccountScreens/>
     </View>
   );
 };

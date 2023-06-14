@@ -2,14 +2,14 @@ import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import { Data } from './Data';
 
-const ItemScreens = () => {
+const ItemFavoriteScreens = () => {
   return (
     <View style={styles.T}>
       {/* header */}
       <View style={styles.header}>
         <TouchableOpacity>
           <Image
-            style={{top: 20}}
+            style={{marginTop: 10}}
             source={require('../../../../../image/back.png')}
           />
         </TouchableOpacity>
@@ -77,7 +77,7 @@ const ItemScreens = () => {
   );
 };
 
-export default ItemScreens;
+export default ItemFavoriteScreens;
 
 const styles = StyleSheet.create({
   header: {

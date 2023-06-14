@@ -62,7 +62,7 @@ const CartScreens: React.FC = () => {
       <View style={styles.header}>
         <TouchableOpacity>
           <Image
-            style={{top: 20}}
+            style={{marginTop: 10}}
             source={require('../../../../image/back.png')}
           />
         </TouchableOpacity>
@@ -190,7 +190,7 @@ const CartScreens: React.FC = () => {
             justifyContent: 'center',
             alignItems: 'center',
             marginLeft: 10,
-            top: 150,
+            top: 110,
           }}>
           <Text style={{fontSize: 18, fontWeight: '700', color: '#fff'}}>
             Checkout

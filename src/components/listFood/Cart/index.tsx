@@ -78,7 +78,6 @@ const CartScreens: React.FC = () => {
       </View>
 
       {/* body */}
-
       <View>
         {Data.map(item => (
               <View

@@ -10,11 +10,12 @@ import BoardingScreens from './src/screens/Boarding/Boarding';
 import SignUpScreens from './src/components/user/signup/name';
 import SignUpPassScreens from './src/components/user/signup/pass';
 import CodePhoneScreens from './src/components/user/signup/codePhone';
+import ExploreScreens from './src/components/listFood/Explore';
 
 const App = (): React.JSX.Element => {
   return (
     <View>
-      <CodePhoneScreens />
+      <HomeScreens />
     </View>
   );
 };

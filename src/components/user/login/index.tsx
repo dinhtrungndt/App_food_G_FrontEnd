@@ -68,6 +68,7 @@ const LoginScreens = (): React.JSX.Element => {
           style={styles.textInput}
           placeholder="Phone Number"
           keyboardType="phone-pad"
+          placeholderTextColor={'#AC8E71'}
         />
       </View>
 

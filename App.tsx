@@ -11,7 +11,7 @@ const App = (): React.JSX.Element => {
   return (
     <SafeAreaView>
       {/* <LoginScreens/> */}
-      <HomeScreens />
+      <LoginScreens />
     </SafeAreaView>
   );
 };

@@ -9,21 +9,7 @@ import {
 import React, {useState} from 'react';
 import {Picker} from '@react-native-picker/picker';
 
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {
-  RootStackParamList,
-  RootStackScreensEnum,
-} from '../../../../components/listFood/RootStackParamList';
-
-type SignUpPassNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  RootStackScreensEnum.Boarding
->;
-
 const SignUpPassScreens = () => {
-  const navigation = useNavigation<SignUpPassNavigationProp>();
-
   return (
     <View style={styles.T}>
       {/* header */}
@@ -123,7 +109,6 @@ const SignUpPassScreens = () => {
 
       {/* btnNext */}
       <TouchableOpacity
-        onPress={() => navigation.navigate(RootStackScreensEnum.SignUpCode)}
         style={{
           width: '91.46%',
           height: 48,

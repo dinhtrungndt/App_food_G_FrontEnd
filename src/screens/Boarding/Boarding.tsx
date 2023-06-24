@@ -98,7 +98,7 @@ const BoardingScreens = (): React.JSX.Element => {
               paddingTop: 12,
               color: '#FF5E00',
             }}>
-            Sign in
+            Sign In
           </Text>
         </TouchableOpacity>
       </View>

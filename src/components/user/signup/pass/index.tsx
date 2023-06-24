@@ -74,52 +74,56 @@ const SignUpPassScreens = () => {
       </Text>
 
       {/* Password */}
-      <TextInput
-        style={{
-          width: '91.46%',
-          height: 48,
-          backgroundColor: '#F3F3F3',
-          borderRadius: 5,
-          left: '2.87%',
-          top: -50,
-          paddingHorizontal: 45,
-          fontSize: 14,
-        }}
-        placeholder="Password"
-        placeholderTextColor={'#AC8E71'}
-      />
-      <Image
-        style={{position: 'absolute', bottom: 245, left: 35}}
-        source={require('../../../../../image/lock_23px.png')}
-      />
-      <Image
-        style={{position: 'absolute', bottom: 245, right: 50}}
-        source={require('../../../../../image/signup_pass_eye_23px.png')}
-      />
+      <View style={{position: 'relative'}}>
+        <TextInput
+          style={{
+            width: '91.46%',
+            height: 48,
+            backgroundColor: '#F3F3F3',
+            borderRadius: 5,
+            left: '2.87%',
+            top: -50,
+            paddingHorizontal: 45,
+            fontSize: 14,
+          }}
+          placeholder="Password"
+          placeholderTextColor={'#AC8E71'}
+        />
+        <Image
+          style={{position: 'absolute', bottom: 63, left: 18}}
+          source={require('../../../../../image/lock_23px.png')}
+        />
+        <Image
+          style={{position: 'absolute', bottom: 60, right: 40}}
+          source={require('../../../../../image/signup_pass_eye_23px.png')}
+        />
+      </View>
 
       {/* Confirm Password */}
-      <TextInput
-        style={{
-          width: '91.46%',
-          height: 48,
-          backgroundColor: '#F3F3F3',
-          borderRadius: 5,
-          left: '2.87%',
-          top: -30,
-          paddingHorizontal: 45,
-          fontSize: 14,
-        }}
-        placeholder="Confirm Password"
-        placeholderTextColor={'#AC8E71'}
-      />
-      <Image
-        style={{position: 'absolute', bottom: 178, left: 35}}
-        source={require('../../../../../image/lock_23px.png')}
-      />
-      <Image
-        style={{position: 'absolute', bottom: 178, right: 50}}
-        source={require('../../../../../image/signup_pass_eye_23px.png')}
-      />
+      <View style={{position: 'relative'}}>
+        <TextInput
+          style={{
+            width: '91.46%',
+            height: 48,
+            backgroundColor: '#F3F3F3',
+            borderRadius: 5,
+            left: '2.87%',
+            top: -30,
+            paddingHorizontal: 45,
+            fontSize: 14,
+          }}
+          placeholder="Confirm Password"
+          placeholderTextColor={'#AC8E71'}
+        />
+        <Image
+          style={{position: 'absolute', bottom: 43, left: 18}}
+          source={require('../../../../../image/lock_23px.png')}
+        />
+        <Image
+          style={{position: 'absolute', bottom: 43, right: 40}}
+          source={require('../../../../../image/signup_pass_eye_23px.png')}
+        />
+      </View>
 
       {/* btnNext */}
       <TouchableOpacity

@@ -107,7 +107,7 @@ const LoginScreens = (): React.JSX.Element => {
       </View>
       <Text style={styles.FogetPass}>Forgote Password</Text>
       <TouchableOpacity
-        onPress={() => navigation.navigate(RootStackScreensEnum.Home)}
+        onPress={() => navigation.navigate(RootStackScreensEnum.TabScreens)}
         style={styles.btnSignIn}>
         <Text
           style={{

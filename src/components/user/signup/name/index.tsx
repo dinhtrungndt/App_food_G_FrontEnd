@@ -64,7 +64,6 @@ const SignUpScreens = (): React.JSX.Element => {
           fontSize: 14,
         }}
         placeholder="Name Surname"
-        keyboardType="phone-pad"
         placeholderTextColor={'#AC8E71'}
       />
 

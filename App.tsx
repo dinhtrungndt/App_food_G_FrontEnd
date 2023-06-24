@@ -7,14 +7,12 @@ import {Text, View, SafeAreaView} from 'react-native';
 import LoginScreens from './src/components/user/login';
 import HomeScreens from './src/components/listFood/Home';
 import BoardingScreens from './src/screens/Boarding/Boarding';
-import SignUpScreens from './src/components/user/signup/name';
-import SignUpPassScreens from './src/components/user/signup/pass';
-import CodePhoneScreens from './src/components/user/signup/codePhone';
 
 const App = (): React.JSX.Element => {
   return (
     <View>
-      <CodePhoneScreens />
+      {/* <LoginScreens/> */}
+      <BoardingScreens />
     </View>
   );
 };

@@ -10,14 +10,28 @@ import {
 import React, {useState} from 'react';
 import {Picker} from '@react-native-picker/picker';
 
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {
+  RootStackParamList,
+  RootStackScreensEnum,
+} from '../../../components/listFood/RootStackParamList';
+
+type LoginNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  RootStackScreensEnum.Boarding
+>;
+
 const LoginScreens = (): React.JSX.Element => {
+  const navigation = useNavigation<LoginNavigationProp>();
+
   const [icon, setIcon] = useState(data[0].code);
 
   const [isShowPass, setIsShowPass] = useState(false);
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => {}}>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
         <Image
           style={styles.backButton}
           source={require('../../../../image/back.png')}
@@ -92,7 +106,9 @@ const LoginScreens = (): React.JSX.Element => {
         </TouchableOpacity>
       </View>
       <Text style={styles.FogetPass}>Forgote Password</Text>
-      <TouchableOpacity style={styles.btnSignIn}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate(RootStackScreensEnum.Home)}
+        style={styles.btnSignIn}>
         <Text
           style={{
             fontSize: 20,
@@ -112,15 +128,18 @@ const LoginScreens = (): React.JSX.Element => {
           }}>
           Don't have an account?
         </Text>
-        <Text
-          style={{
-            fontSize: 16,
-            fontWeight: '400',
-            color: '#FF5E00',
-            marginLeft: 6,
-          }}>
-          Sign Up
-        </Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(RootStackScreensEnum.SignUp)}>
+          <Text
+            style={{
+              fontSize: 16,
+              fontWeight: '400',
+              color: '#FF5E00',
+              marginLeft: 6,
+            }}>
+            Sign Up
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

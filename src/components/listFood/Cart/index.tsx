@@ -7,53 +7,13 @@ import {
   FlatList,
   Alert,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Data} from './Data';
 
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-
-
-const SwipeableRight = {
-  autoClose: true,
-  right: [
-    {
-      onPress: () => {
-        Alert.alert(
-          'Thông báo !',
-          'Bạn có chắc chắn muốn xóa sản phẩm này ?',
-          [
-            {
-              text: 'No',
-              onPress: () => {},
-              style: 'cancel',
-            },
-            {
-              text: 'Yes',
-              onPress: () => {},
-            },
-          ],
-          {cancelable: true},
-        );
-      },
-      component: (
-        <Image
-          style={{
-            position: 'relative',
-            left: 20,
-            top: 35,
-            width: 30,
-            height: 30,
-          }}
-          source={require('../../../../image/Delete_25px.png')}
-        />
-      ),
-      type: 'delete',
-    },
-  ],
-};
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 const CartScreens: React.FC = () => {
   return (
@@ -72,6 +32,7 @@ const CartScreens: React.FC = () => {
             fontWeight: '700',
             color: '#FF5E00',
             textAlign: 'center',
+            paddingBottom: 20,
           }}>
           Cart
         </Text>
@@ -79,10 +40,33 @@ const CartScreens: React.FC = () => {
 
       {/* body */}
       <View>
-        {Data.map(item => (
+        <FlatList
+          style={{height: 480}}
+          data={Data}
+          renderItem={({item}) => (
+            <Swipeable
+              renderRightActions={() => (
+                <View
+                  style={{
+                    width: 71,
+                    height: 95,
+                    backgroundColor: '#A42B32',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}>
+                  <Image
+                    style={{
+                      position: 'relative',
+                      width: 30,
+                      height: 30,
+                    }}
+                    source={require('../../../../image/Delete_25px.png')}
+                  />
+                </View>
+              )}>
               <View
                 key={item.id}
-                style={{flexDirection: 'row', paddingTop: 26}}>
+                style={{flexDirection: 'row', paddingTop: 26, top: -26}}>
                 <Image style={{width: 90}} source={item.image} />
                 <View>
                   <Text
@@ -176,7 +160,11 @@ const CartScreens: React.FC = () => {
                     borderColor: '#CACFD2',
                   }}></Text>
               </View>
-        ))}
+            </Swipeable>
+          )}
+          keyExtractor={item => item.id.toString()}
+          showsVerticalScrollIndicator={false}
+        />
       </View>
 
       {/* footer */}
@@ -190,7 +178,7 @@ const CartScreens: React.FC = () => {
             justifyContent: 'center',
             alignItems: 'center',
             marginLeft: 10,
-            top: 110,
+            top: 50,
           }}>
           <Text style={{fontSize: 18, fontWeight: '700', color: '#fff'}}>
             Checkout

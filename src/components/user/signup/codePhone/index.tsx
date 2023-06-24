@@ -10,7 +10,21 @@ import {
 import React, {useState} from 'react';
 import {Picker} from '@react-native-picker/picker';
 
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {
+  RootStackParamList,
+  RootStackScreensEnum,
+} from '../../../../components/listFood/RootStackParamList';
+
+type SignUpCodeNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  RootStackScreensEnum.Boarding
+>;
+
 const CodePhoneScreens = () => {
+  const navigation = useNavigation<SignUpCodeNavigationProp>();
+
   const [codeInputs, setCodeInputs] = useState(['', '', '', '', '']);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -81,14 +95,14 @@ const CodePhoneScreens = () => {
         }}>
         088 XXXX XXX
       </Text>
-
       {/* Code */}
       <View
         style={{
           flexDirection: 'row',
           width: '100%',
-          top: -35,
-          left: 10,
+          bottom: 195,
+          left: 30,
+          position: 'absolute',
         }}>
         <TextInput
           style={{
@@ -191,15 +205,19 @@ const CodePhoneScreens = () => {
         style={{
           width: '91.46%',
           height: 48,
+          position: 'absolute',
           backgroundColor: '#FF5E00',
           borderRadius: 30,
-          left: '2.87%',
+          left: 30,
           justifyContent: 'center',
           alignItems: 'center',
-          top: 10,
+          bottom: 110,
           opacity: validateInputs() ? 1 : 0.5,
         }}
-        disabled={!validateInputs()}>
+        disabled={!validateInputs()}
+        onPress={() => {
+          navigation.navigate(RootStackScreensEnum.TabScreens);
+        }}>
         <Text style={{fontSize: 18, fontWeight: '700', color: '#FFFFFF'}}>
           Sign Up
         </Text>

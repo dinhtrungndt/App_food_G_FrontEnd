@@ -9,32 +9,17 @@ import {
 import React, {useState} from 'react';
 import {Picker} from '@react-native-picker/picker';
 
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {
-  RootStackParamList,
-  RootStackScreensEnum,
-} from '../../../../components/listFood/RootStackParamList';
-
-type SignUpNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  RootStackScreensEnum.Boarding
->;
-
-const SignUpScreens = (): React.JSX.Element => {
-  const navigation = useNavigation<SignUpNavigationProp>();
-
+const SignUpScreens = () => {
   const [icon, setIcon] = useState(data[0].code);
 
   return (
     <View style={styles.T}>
       {/* header */}
-      <TouchableOpacity
-        style={{
-          marginTop: 10,
-        }}
-        onPress={() => navigation.goBack()}>
-        <Image source={require('../../../../../image/back.png')} />
+      <TouchableOpacity>
+        <Image
+          style={{marginTop: 10}}
+          source={require('../../../../../image/back.png')}
+        />
       </TouchableOpacity>
       <Text
         style={{
@@ -42,13 +27,12 @@ const SignUpScreens = (): React.JSX.Element => {
           fontWeight: '700',
           color: '#FF5E00',
           textAlign: 'center',
-          top: -10,
         }}>
         Sign Up
       </Text>
       {/* img phone */}
       <Image
-        style={{top: -80}}
+        style={{top: -60}}
         source={require('../../../../../image/signup_phone1.png')}
       />
       {/* Name Surname */}
@@ -59,7 +43,7 @@ const SignUpScreens = (): React.JSX.Element => {
           backgroundColor: '#F3F3F3',
           borderRadius: 5,
           left: '2.87%',
-          top: -80,
+          top: -50,
           paddingHorizontal: 26,
           fontSize: 14,
         }}
@@ -98,20 +82,20 @@ const SignUpScreens = (): React.JSX.Element => {
           fontWeight: '400',
           color: '#7F4E1D',
           left: 10,
-          top: -30,
+          top: -10,
         }}>
         We need to verify you. We will send you a one time verification code.
       </Text>
 
       {/* btnNext */}
       <TouchableOpacity
-        onPress={() => navigation.navigate(RootStackScreensEnum.SignUpPass)}
         style={{
           width: '91.46%',
           height: 48,
           backgroundColor: '#FF5E00',
           borderRadius: 30,
           left: '2.87%',
+          top: 35,
           justifyContent: 'center',
           alignItems: 'center',
         }}>
@@ -126,14 +110,11 @@ const SignUpScreens = (): React.JSX.Element => {
           fontSize: 14,
           fontWeight: '400',
           color: '#7F4E1D',
-          top: 10,
+          top: 45,
           textAlign: 'center',
         }}>
         Already have an account?{' '}
-        <TouchableOpacity
-          onPress={() => navigation.navigate(RootStackScreensEnum.Login)}>
-          <Text style={{color: '#FF5E00', fontWeight: '700'}}>Login</Text>
-        </TouchableOpacity>
+        <Text style={{color: '#FF5E00', fontWeight: '700'}}>Login</Text>
       </Text>
     </View>
   );
@@ -153,7 +134,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 5,
     width: '91.46%',
-    top: -55,
+    top: -30,
     height: 48,
     backgroundColor: '#F3F3F3',
     left: 10,

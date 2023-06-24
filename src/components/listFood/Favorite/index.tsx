@@ -1,21 +1,7 @@
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {
-  RootStackParamList,
-  RootStackScreensEnum,
-} from '../../../components/listFood/RootStackParamList';
-
-type FavoriteNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  RootStackScreensEnum.Boarding
->;
-
 const FavoriteScreens = () => {
-  const navigation = useNavigation<FavoriteNavigationProp>();
-
   return (
     <View style={styles.T}>
       {/* header */}
@@ -64,7 +50,6 @@ const FavoriteScreens = () => {
       {/* footer */}
       <View>
         <TouchableOpacity
-          onPress={() => navigation.navigate(RootStackScreensEnum.ItemFavorite)}
           style={{
             backgroundColor: '#FF5E00',
             width: 343,

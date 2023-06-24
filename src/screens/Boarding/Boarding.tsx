@@ -1,21 +1,7 @@
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {
-  RootStackParamList,
-  RootStackScreensEnum,
-} from '../../components/listFood/RootStackParamList';
-
-type BoardingNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  RootStackScreensEnum.Boarding
->;
-
-const BoardingScreens = (): React.JSX.Element => {
-  const navigation = useNavigation<BoardingNavigationProp>();
-
+const BoardingScreens = () => {
   return (
     <View style={styles.T}>
       {/* header */}
@@ -55,7 +41,6 @@ const BoardingScreens = (): React.JSX.Element => {
       <View>
         {/* btnSignUp */}
         <TouchableOpacity
-          onPress={() => navigation.navigate(RootStackScreensEnum.SignUp)}
           style={{
             width: 329,
             height: 48,
@@ -79,7 +64,6 @@ const BoardingScreens = (): React.JSX.Element => {
         {/* btnSignIn */}
 
         <TouchableOpacity
-          onPress={() => navigation.navigate(RootStackScreensEnum.Login)}
           style={{
             width: 329,
             height: 48,

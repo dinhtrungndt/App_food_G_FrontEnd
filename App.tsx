@@ -8,9 +8,6 @@ import ItemFavoriteScreens from './src/components/listFood/Favorite/Item';
 const App = () => {
   return (
     <View>
-     
-    <AccountScreens/>
-
       <AccountScreens />
     </View>
   );

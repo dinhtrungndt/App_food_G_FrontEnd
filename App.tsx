@@ -6,12 +6,13 @@ import ItemFavoriteScreens from './src/components/listFood/Favorite/Item';
 import {Text, View, SafeAreaView} from 'react-native';
 import LoginScreens from './src/components/user/login';
 import HomeScreens from './src/components/listFood/Home';
+import ExploreScreens from './src/components/listFood/Explore';
 
 const App = (): React.JSX.Element => {
   return (
     <SafeAreaView>
       {/* <LoginScreens/> */}
-      <HomeScreens />
+      <ExploreScreens />
     </SafeAreaView>
   );
 };

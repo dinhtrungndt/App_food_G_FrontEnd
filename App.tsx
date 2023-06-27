@@ -15,7 +15,7 @@ import CodePhoneScreens from './src/components/user/signup/codePhone';
 const App = (): React.JSX.Element => {
   return (
     <SafeAreaView>
-      <ExploreScreens />
+      <LoginScreens />
     </SafeAreaView>
   );
 };

@@ -1,7 +1,14 @@
-import { Image, StyleSheet, Text, TextInput, View, Pressable, TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
-import { Picker } from '@react-native-picker/picker'
-
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  Pressable,
+  TouchableOpacity,
+} from 'react-native';
+import React, {useState} from 'react';
+import {Picker} from '@react-native-picker/picker';
 
 const LoginScreens = (): React.JSX.Element => {
   const [icon, setIcon] = useState(data[0].code);
@@ -10,21 +17,29 @@ const LoginScreens = (): React.JSX.Element => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => { }}>
-        <Image style={styles.backButton} source={require('../../../../image/back.png')} />
+      <TouchableOpacity>
+        <Image
+          style={styles.backButton}
+          source={require('../../../../image/back.png')}
+        />
       </TouchableOpacity>
       <Text style={styles.signInText}>Sign In</Text>
-      <Image style={styles.loginImage} source={require('../../../../image/phonelogin.png')} />
+      <Image
+        style={styles.loginImage}
+        source={require('../../../../image/phonelogin.png')}
+      />
 
-      <Text style={{
-        fontSize: 18,
-        fontWeight: '400',
-        color: '#6D3805',
-        width: 330,
-        height: 42,
-        margin: '4.27%'
-      }}>Enter your phone number and
-        password to access your account</Text>
+      <Text
+        style={{
+          fontSize: 18,
+          fontWeight: '400',
+          color: '#6D3805',
+          width: 300,
+          height: 42,
+          margin: '4.27%',
+        }}>
+        Enter your phone number and password to access your account
+      </Text>
 
       <View style={styles.inputContainer}>
         <Picker
@@ -39,56 +54,81 @@ const LoginScreens = (): React.JSX.Element => {
                 key={index}
                 label={item.code}
                 value={item.image}
-              // icon={() => (
-              //   <Image
-              //     style={{width: 30, height: 20}}
-              //     source={item.image}
-              //   />
-              // )}
+                // icon={() => (
+                //   <Image
+                //     style={{width: 30, height: 20}}
+                //     source={item.image}
+                //   />
+                // )}
               />
             );
           })}
         </Picker>
-        <TextInput style={styles.textInput} placeholder="Phone Number" keyboardType='phone-pad' />
+        <TextInput
+          style={styles.textInput}
+          placeholder="Phone Number"
+          keyboardType="phone-pad"
+          placeholderTextColor={'#AC8E71'}
+        />
       </View>
 
       <View style={styles.inputContainer2}>
         <TextInput
           style={styles.passInput}
           secureTextEntry={!isShowPass}
-          placeholder='Password'
+          placeholder="Password"
         />
-        <TouchableOpacity style={styles.toggleButton} onPress={() => setIsShowPass(!isShowPass)}>
-          <Image style={styles.eyaImage} source={isShowPass ? require('../../../../image/show.png') : require('../../../../image/hide.png')} />
+        <TouchableOpacity
+          style={styles.toggleButton}
+          onPress={() => setIsShowPass(!isShowPass)}>
+          <Image
+            style={styles.eyaImage}
+            source={
+              isShowPass
+                ? require('../../../../image/show.png')
+                : require('../../../../image/hide.png')
+            }
+          />
         </TouchableOpacity>
       </View>
-      <Text style={styles.FogetPass} >Forgote Password</Text>
+      <Text style={styles.FogetPass}>Forgote Password</Text>
       <TouchableOpacity style={styles.btnSignIn}>
-        <Text style={{
-          fontSize: 20,
-          fontWeight: '700',
-          color: '#FFFFFF'
-        }}>Sign In</Text>
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: '700',
+            color: '#FFFFFF',
+          }}>
+          Sign In
+        </Text>
       </TouchableOpacity>
 
       <View style={styles.container3}>
-        <Text style={{
-          fontSize: 16,
-          fontWeight: '400',
-          color: '#7F4E1D'
-        }}>Don't have an account?</Text>
-        <Text style={{
-          fontSize: 16,
-          fontWeight: '400',
-          color: '#FF5E00',
-          marginLeft: 6
-        }}>Sign Up</Text>
+        <Text
+          style={{
+            fontSize: 16,
+            fontWeight: '400',
+            color: '#7F4E1D',
+          }}>
+          Don't have an account?
+        </Text>
+        <TouchableOpacity>
+          <Text
+            style={{
+              fontSize: 16,
+              fontWeight: '400',
+              color: '#FF5E00',
+              marginLeft: 6,
+            }}>
+            Sign Up
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default LoginScreens
+export default LoginScreens;
 
 const styles = StyleSheet.create({
   container: {
@@ -149,7 +189,6 @@ const styles = StyleSheet.create({
     height: 36,
     fontSize: 16,
     paddingHorizontal: 27,
-
   },
   toggleButton: {
     position: 'absolute',
@@ -184,61 +223,61 @@ const styles = StyleSheet.create({
     top: 54,
     left: 80,
   },
-})
+});
 
 var data = [
   {
     image: require('../../../../image/vn.png'),
-    name: "VietNam",
-    code: "+84"
+    name: 'VietNam',
+    code: '+84',
   },
   {
     image: require('../../../../image/SE.png'),
-    name: "United States",
-    code: "+1"
+    name: 'United States',
+    code: '+1',
   },
   {
     image: require('../../../../image/SE.png'),
-    name: "United Kingdom",
-    code: "+44"
+    name: 'United Kingdom',
+    code: '+44',
   },
   {
     image: require('../../../../image/SE.png'),
-    name: "Australia",
-    code: "+61"
+    name: 'Australia',
+    code: '+61',
   },
   {
     image: require('../../../../image/SE.png'),
-    name: "India",
-    code: "+91"
+    name: 'India',
+    code: '+91',
   },
   {
     image: require('../../../../image/SE.png'),
-    name: "Brazil",
-    code: "+55"
+    name: 'Brazil',
+    code: '+55',
   },
   {
     image: require('../../../../image/SE.png'),
-    name: "China",
-    code: "+86"
+    name: 'China',
+    code: '+86',
   },
   {
     image: require('../../../../image/SE.png'),
-    name: "France",
-    code: "+33"
+    name: 'France',
+    code: '+33',
   },
   {
-    name: "Germany",
-    code: "+49"
-  },
-  {
-    image: require('../../../../image/SE.png'),
-    name: "Japan",
-    code: "+81"
+    name: 'Germany',
+    code: '+49',
   },
   {
     image: require('../../../../image/SE.png'),
-    name: "Mexico",
-    code: "+52"
+    name: 'Japan',
+    code: '+81',
+  },
+  {
+    image: require('../../../../image/SE.png'),
+    name: 'Mexico',
+    code: '+52',
   },
 ];

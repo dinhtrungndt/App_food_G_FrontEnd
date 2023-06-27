@@ -16,7 +16,7 @@ import DetailScreens from './src/components/listFood/Home/Detail';
 const App = (): React.JSX.Element => {
   return (
     <SafeAreaView>
-      <ExploreScreens />
+      <FuitsScreens />
     </SafeAreaView>
   );
 };

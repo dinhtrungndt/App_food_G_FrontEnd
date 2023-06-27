@@ -11,7 +11,7 @@ const AccountScreens = () => {
     <Text style={{left:60,color:'#6D3805',width:57,height:27,fontSize:18,fontFamily:'Klarna Tex',fontWeight:'bold'}}>Profile</Text>
     </View>
     <View style={styles.profile}>
-    <Image style={{top:30,backgroundColor:'#FF5E00',width:30,height:30,borderRadius:30}} source={require('../../../../image/mumu.png')}></Image>
+    <Image style={{top:30,backgroundColor:'#FF5E00',width:27,height:27,borderRadius:20,}} source={require('../../../../image/shopping_basket_24px.png')}></Image>
     <Text style={{left:60,color:'#6D3805',width:57,height:27,fontSize:18,fontFamily:'Klarna Tex',fontWeight:'bold'}}>Orders</Text>
     </View>
     <View style={styles.profile}>

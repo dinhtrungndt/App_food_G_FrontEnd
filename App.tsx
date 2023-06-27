@@ -9,11 +9,12 @@ import HomeScreens from './src/components/listFood/Home';
 import ExploreScreens from './src/components/listFood/Explore';
 import BoardingScreens from './src/screens/Boarding/Boarding';
 import SignUpScreens from './src/components/user/signup/name';
+import SignUpPassScreens from './src/components/user/signup/pass';
 
 const App = (): React.JSX.Element => {
   return (
     <SafeAreaView>
-      <SignUpScreens />
+      <SignUpPassScreens />
     </SafeAreaView>
   );
 };

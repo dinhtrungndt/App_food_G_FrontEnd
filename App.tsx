@@ -8,11 +8,12 @@ import LoginScreens from './src/components/user/login';
 import HomeScreens from './src/components/listFood/Home';
 import ExploreScreens from './src/components/listFood/Explore';
 import BoardingScreens from './src/screens/Boarding/Boarding';
+import SignUpScreens from './src/components/user/signup/name';
 
 const App = (): React.JSX.Element => {
   return (
     <SafeAreaView>
-      <BoardingScreens />
+      <SignUpScreens />
     </SafeAreaView>
   );
 };
